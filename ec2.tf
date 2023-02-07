@@ -4,12 +4,8 @@ provider "aws" {
 resource "aws_instance" "dev" {
   ami           = "ami-0cca134ec43cf708f"
   instance_type = "t2.nano"
-  tags          = local.common_tags
-  count         = 3
+  count         = 1
 }
-locals {
-  common_tags = {
-  Owner = "Siva"
-  service = "backend"
-  }
- }
+tags {
+  Name = "terraform"
+}
