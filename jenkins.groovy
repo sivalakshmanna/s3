@@ -38,6 +38,11 @@ pipeline {
             }
         
         }
+        stage('email') {
+            steps {
+               emailext body: 'this build is success', subject: 'build ', to: 'kuruva.devops02@gmail.com'
+            }
+        }
     }
     
         
