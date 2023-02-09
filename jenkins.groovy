@@ -41,7 +41,7 @@ pipeline {
         stage('email') {
             steps {
                 sh "pwd"
-               emailext body: 'this build is success', subject: 'build ', to: 'kuruva.devops02@gmail.com'
+               emailext body: 'this build is success', subject: 'build ', to: 'siva.devops02@gmail.com'
             }
         }
     }
